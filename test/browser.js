@@ -1,3 +1,8 @@
+// overcome issue when importing .svg in test
+import requireHacker from 'require-hacker';
+
+requireHacker.hook('svg', () => 'module.exports = ""');
+
 const { JSDOM } = require('jsdom');
 
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>');

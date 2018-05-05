@@ -9,7 +9,7 @@ import { cssCreateLeague } from '../../styles';
 
 configure({ adapter: new Adapter() });
 
-test('shallow render test of create league button', (t) => {
+test('shallow render test of CreateLeagueButton', (t) => {
 
 	const wrapper = shallow(
 		<CreateLeagueButton
@@ -20,7 +20,7 @@ test('shallow render test of create league button', (t) => {
 	);
 
 	t.equal(wrapper.type(), FlatButton,
-		'Create league button did not render a FlatButton');
+		'should render a FlatButton');
 
 	t.end();
 });

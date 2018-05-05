@@ -5,11 +5,10 @@ import Adapter from 'enzyme-adapter-react-16';
 import FlatButton from 'material-ui/FlatButton';
 
 import CreateLeagueIcon from '../CreateLeagueIcon';
-import { cssCreateLeague } from '../../styles';
 
 configure({ adapter: new Adapter() });
 
-test('shallow render test of create league icon', (t) => {
+test('shallow render test of CreateLeagueIcon', (t) => {
 
     const wrapper = shallow(
         <CreateLeagueIcon
@@ -20,7 +19,7 @@ test('shallow render test of create league icon', (t) => {
     );
 
     t.equal(wrapper.type(), 'img',
-    'Create league icon did not render an <img>');
+    'should render an <img>');
 
     t.end();
 });
