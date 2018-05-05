@@ -13,7 +13,7 @@ import { createLeague } from '../../actions/index';
 import { cssContent, cssCreateLeague } from '../styles';
 
 
-class CreateLeagueForm extends Component {
+export class CreateLeagueForm extends Component {
 
 	onSubmit = formBody => {
 		const { createLeague, history } = this.props;
