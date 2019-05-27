@@ -7,12 +7,12 @@ import {
 	TableHeaderColumn,
 	TableRow,
 	TableRowColumn
-} from 'material-ui/Table';
+} from '@material-ui/Table';
 
-import TextField from 'material-ui/TextField';
-import SearchIcon from 'material-ui/svg-icons/action/search';
-import ArrowUp from 'material-ui/svg-icons/navigation/arrow-drop-up';
-import ArrowDown from 'material-ui/svg-icons/navigation/arrow-drop-down';
+import TextField from '@material-ui/TextField';
+import SearchIcon from '@material-ui/svg-icons/action/search';
+import ArrowUp from '@material-ui/svg-icons/navigation/arrow-drop-up';
+import ArrowDown from '@material-ui/svg-icons/navigation/arrow-drop-down';
 import { cssDashboard } from '../../../styles';
 
 

@@ -4,7 +4,7 @@ import {
 	TableHeader as MuiTableHeader,
 	TableHeaderColumn,
 	TableRow
-} from 'material-ui/Table';
+} from '@material-ui/Table';
 import ColumnHeaderChild from './columnHeaderChild.jsx';
 import { cssDashboard } from '../../../styles';
 

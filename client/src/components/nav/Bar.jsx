@@ -1,5 +1,5 @@
 import React from 'react';
-import AppBar from 'material-ui/AppBar';
+import AppBar from '@material-ui/AppBar';
 import ThemeMenu from './ThemeMenu.jsx';
 import { cssAppBar as css } from '../styles';
 import PropTypes from 'prop-types';

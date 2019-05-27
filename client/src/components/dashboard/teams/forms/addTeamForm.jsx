@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextField } from 'redux-form-material-ui';
-import RaisedButton from 'material-ui/RaisedButton';
+import { TextField } from '../redux_form_mui/replacement';
+import RaisedButton from '@material-ui/RaisedButton';
 import { Field, reduxForm } from 'redux-form';
 
 import { createTeam, openSnackbar } from '../../../../actions/index';

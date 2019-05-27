@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { reset } from 'redux-form';
-import RaisedButton from 'material-ui/RaisedButton';
+import RaisedButton from '@material-ui/RaisedButton';
 
 const btnContainerStyle = {
 	position: 'absolute',

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import CircularProgress from 'material-ui/CircularProgress';
+import CircularProgress from '@material-ui/core/CircularProgress';
 import { initAuthState } from '../actions/index';
 import { Redirect } from 'react-router-dom';
 import { cssLoading } from '../components/styles';

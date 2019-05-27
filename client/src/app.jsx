@@ -5,9 +5,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import requireAuth from './hoc/requireAuthentication.jsx';
 // higher order components used to bootstrap authentications and loading state
 
-
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import getMuiTheme from 'material-ui/styles/getMuiTheme';
+import { ThemeProvider} from '@material-ui/styles/';
+import { createMuiTheme } from '@material-ui/core/styles';
 
 import { connect } from 'react-redux';
 
@@ -19,14 +18,14 @@ const App = props => {
 	const { palette } = props;
 
 	return (
-		<MuiThemeProvider muiTheme={getMuiTheme({ palette })}>
+		<ThemeProvider muiTheme={createMuiTheme({ palette })}>
 			<Router>
 				<div>
 					<Route component={requireAuth(Content)} path='/' />
 					<Route component={Login} path='/login' />
 				</div>
 			</Router>
-		</MuiThemeProvider>
+		</ThemeProvider>
 	);
 };
 

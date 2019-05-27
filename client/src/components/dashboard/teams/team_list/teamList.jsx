@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 import { cssContent, cssDashboard } from '../../../styles';
 import TableTemplate from '../../helper/tableTemplate/tableTemplate.jsx';
-import MenuItem from 'material-ui/MenuItem';
-import DropDownMenu from 'material-ui/DropDownMenu';
+import MenuItem from '@material-ui/MenuItem';
+import DropDownMenu from '@material-ui/DropDownMenu';
 
 import { configTeamForTable } from './teamData';
 

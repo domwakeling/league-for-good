@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Table } from 'material-ui/Table';
+import { Table } from '@material-ui/Table';
 
 import TableBody from './tableBody.jsx';
 import TableHeader from './tableHeader.jsx';

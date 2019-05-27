@@ -2,13 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import Drawer from 'material-ui/Drawer';
-import Divider from 'material-ui/Divider';
-import {List, ListItem} from 'material-ui/List';
-import AddCircle from 'material-ui/svg-icons/content/add-circle';
-import Help from 'material-ui/svg-icons/action/help';
-import ArchiveIcon from 'material-ui/svg-icons/content/archive';
-import LogOutIcon from 'material-ui/svg-icons/action/exit-to-app';
+import Drawer from '@material-ui/Drawer';
+import Divider from '@material-ui/Divider';
+import {List, ListItem} from '@material-ui/List';
+import AddCircle from '@material-ui/svg-icons/content/add-circle';
+import Help from '@material-ui/svg-icons/action/help';
+import ArchiveIcon from '@material-ui/svg-icons/content/archive';
+import LogOutIcon from '@material-ui/svg-icons/action/exit-to-app';
 
 import MenuLeagueItem from './MenuLeagueItem.jsx';
 

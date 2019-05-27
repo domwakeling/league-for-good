@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { TextField } from 'redux-form-material-ui';
-import RaisedButton from 'material-ui/RaisedButton';
+import { TextField } from '../redux_form_mui/replacement';
+// was RaisedButton
+import Button from '@material-ui/core/Button';
 import { Field, reduxForm, formValueSelector } from 'redux-form';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
@@ -54,7 +55,7 @@ class CreateLeagueForm extends Component {
 								fullWidth={true}
 								name='name'
 							/>
-							<RaisedButton
+							<Button
 								backgroundColor={cssCreateLeague.raisedButton.backgroundColor}
 								label='Create'
 								labelStyle={cssCreateLeague.raisedButton.label}

@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { cssContent, cssDashboard } from '../../../styles';
 
-import IconButton from 'material-ui/IconButton';
-import BackArrow from 'material-ui/svg-icons/navigation/arrow-back';
+import IconButton from '@material-ui/IconButton';
+import BackArrow from '@material-ui/svg-icons/navigation/arrow-back';
 
 const PlayerApplication = ({ location, history }) => {
 	// Player application is loaded from state stored in react-router's

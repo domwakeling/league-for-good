@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import { ListItem } from 'material-ui/List';
+import { ListItem } from '@material-ui/List';
 import * as Links from '../routes';
 
-import Avatar from 'material-ui/Avatar';
+import Avatar from '@material-ui/Avatar';
 
 import { SportsIcons } from '../sports';
 import { cssMenu } from '../styles';

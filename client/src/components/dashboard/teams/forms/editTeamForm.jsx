@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { TextField, Checkbox } from 'redux-form-material-ui';
+import { TextField, Checkbox } from '../redux_form_mui/replacement';
 import { Field, reduxForm } from 'redux-form';
 import { updateTeam, openSnackbar } from '../../../../actions/index';
 

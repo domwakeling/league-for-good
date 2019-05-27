@@ -1,10 +1,10 @@
 import React from 'react';
-import { TextField, SelectField } from 'redux-form-material-ui';
-import MenuItem from 'material-ui/MenuItem';
+import { TextField, SelectField } from '../redux_form_mui/replacement';
+import MenuItem from '@material-ui/MenuItem';
 import PropTypes from 'prop-types';
-import RaisedButton from 'material-ui/RaisedButton';
-import IconButton from 'material-ui/IconButton';
-import HelpOutline from 'material-ui/svg-icons/action/help-outline';
+import RaisedButton from '@material-ui/RaisedButton';
+import IconButton from '@material-ui/IconButton';
+import HelpOutline from '@material-ui/svg-icons/action/help-outline';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 

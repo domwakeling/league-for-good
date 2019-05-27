@@ -8,8 +8,8 @@ import { bindActionCreators } from 'redux';
 import { fetchPlayer } from '../../../../../actions/index';
 import { cssDashboard } from '../../../../styles';
 
-import IconButton from 'material-ui/IconButton';
-import ListIcon from 'material-ui/svg-icons/action/list';
+import IconButton from '@material-ui/IconButton';
+import ListIcon from '@material-ui/svg-icons/action/list';
 
 const PlayerLink = props => {
 	const { fetchPlayer, ...player } = props;

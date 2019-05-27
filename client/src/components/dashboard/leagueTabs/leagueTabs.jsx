@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Tabs, Tab } from 'material-ui/Tabs';
+import { Tabs, Tab } from '@material-ui/Tabs';
 import { generateLinks } from './tab_navbar/generateLinks.jsx';
 import { tabs } from './leagueTabData';
 import { cssDashboard } from '../../styles';

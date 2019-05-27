@@ -5,10 +5,10 @@ import { bindActionCreators } from 'redux';
 import { cssDashboard } from '../styles';
 import { openModal } from '../../actions/index';
 
-import IconButton from 'material-ui/IconButton';
-import EditIcon from 'material-ui/svg-icons/image/edit';
-import DeleteIcon from 'material-ui/svg-icons/action/delete';
-import CheckCircleIcon from 'material-ui/svg-icons/action/check-circle';
+import IconButton from '@material-ui/IconButton';
+import EditIcon from '@material-ui/svg-icons/image/edit';
+import DeleteIcon from '@material-ui/svg-icons/action/delete';
+import CheckCircleIcon from '@material-ui/svg-icons/action/check-circle';
 
 const getIcon = action => {
 	const map = {

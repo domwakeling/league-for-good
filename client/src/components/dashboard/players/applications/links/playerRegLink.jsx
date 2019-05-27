@@ -8,8 +8,8 @@ import {
 } from '../../../../routes';
 import { cssDashboard } from '../../../../styles';
 
-import IconButton from 'material-ui/IconButton';
-import ProfileIcon from 'material-ui/svg-icons/action/account-box';
+import IconButton from '@material-ui/IconButton';
+import ProfileIcon from '@material-ui/svg-icons/action/account-box';
 
 const PlayerLink = props => {
 	const { player } = props;

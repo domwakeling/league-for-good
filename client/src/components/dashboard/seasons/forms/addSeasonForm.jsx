@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import RaisedButton from 'material-ui/RaisedButton';
+import RaisedButton from '@material-ui/RaisedButton';
 import { Field, reduxForm } from 'redux-form';
 
 import { createSeason, openSnackbar } from '../../../../actions/index';
@@ -13,7 +13,7 @@ import {
 	TextField,
 	DatePicker,
 	Checkbox
-} from 'redux-form-material-ui';
+} from '../redux_form_mui/replacement';
 
 
 const AddSeasonForm = props => {

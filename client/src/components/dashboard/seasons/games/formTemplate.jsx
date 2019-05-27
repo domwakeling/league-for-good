@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Navigation from '../../helper/NavigationArrow.jsx';
 
-import RaisedButton from 'material-ui/RaisedButton';
-import MenuItem from 'material-ui/MenuItem';
+import RaisedButton from '@material-ui/RaisedButton';
+import MenuItem from '@material-ui/MenuItem';
 import { Field } from 'redux-form';
 
 
@@ -14,7 +14,7 @@ import {
 	TextField,
 	SelectField,
 	DatePicker
-} from 'redux-form-material-ui';
+} from '../redux_form_mui/replacement';
 
 
 export default class FormTemplate extends React.Component {

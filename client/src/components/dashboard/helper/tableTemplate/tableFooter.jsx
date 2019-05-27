@@ -4,10 +4,10 @@ import {
 	TableFooter as MuiTableFooter,
 	TableRowColumn,
 	TableRow
-} from 'material-ui/Table';
-import IconButton from 'material-ui/IconButton';
-import ChevronLeft from 'material-ui/svg-icons/navigation/chevron-left';
-import ChevronRight from 'material-ui/svg-icons/navigation/chevron-right';
+} from '@material-ui/Table';
+import IconButton from '@material-ui/IconButton';
+import ChevronLeft from '@material-ui/svg-icons/navigation/chevron-left';
+import ChevronRight from '@material-ui/svg-icons/navigation/chevron-right';
 
 const footerTextStyle = {
 	float: 'right',

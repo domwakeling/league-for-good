@@ -4,7 +4,7 @@ import {
 	Card,
 	CardActions,
 	CardTitle
-} from 'material-ui/Card';
+} from '@material-ui/Card';
 import CreateLeagueButton from './CreateLeagueButton.js';
 
 import { sports } from '../sports.js';

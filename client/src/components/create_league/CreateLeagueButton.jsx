@@ -1,7 +1,7 @@
 /* eslint-disable react/no-multi-comp */
 import React from 'react';
 import PropTypes from 'prop-types';
-import FlatButton from 'material-ui/FlatButton';
+import FlatButton from '@material-ui/FlatButton';
 
 import { cssCreateLeague } from '../styles';
 import CreateLeagueIcon from './CreateLeagueIcon.jsx';

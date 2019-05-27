@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
-import { TextField } from 'redux-form-material-ui';
+import { TextField } from '../redux_form_mui/replacement';
 
 import { cssContent, cssDashboard } from '../../../styles';
-import RaisedButton from 'material-ui/RaisedButton';
+import RaisedButton from '@material-ui/RaisedButton';
 import { editLeague, openSnackbar } from '../../../../actions/index';
 import { connect } from 'react-redux';
 

@@ -1,5 +1,9 @@
-import { darkBlack, fullBlack } from 'material-ui/styles/colors';
-import {fade} from 'material-ui/utils/colorManipulator';
+// import { darkBlack, fullBlack } from '@material-ui/core/colors';
+import { fade } from '@material-ui/core/styles/colorManipulator';
+
+// Previosuly imported from MaterialUI, but deprecated since
+const darkBlack = 'rgba(0, 0, 0, 0.87)';
+const fullBlack = 'rgba(0, 0, 0, 1)';
 
 //* ***************************************************************************
 //* ***************************** Theme Colors ********************************
@@ -58,8 +62,8 @@ const accentMixin = {
 // extra colors required for the palette
 const miscMixin = {
 	borderColor: '#bdbdbd',
-	disabledColor: fade(darkBlack, 0.3),
-	clockCircleColor: fade(darkBlack, 0.07),
+	disabledColor: `${fade(darkBlack, 0.3)}`,
+	clockCircleColor: `${fade(darkBlack, 0.07)}`,
 	shadowColor: fullBlack
 };
 

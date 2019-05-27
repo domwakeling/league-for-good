@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MenuItem from 'material-ui/MenuItem';
+import MenuItem from '@material-ui/MenuItem';
 import { Field } from 'redux-form';
 import { cssDashboard } from '../../../../styles';
-import { SelectField } from 'redux-form-material-ui';
+import { SelectField } from '../redux_form_mui/replacement';
 
 const renderTeams = teams =>
 	teams.map(team => (

@@ -4,7 +4,7 @@ import {
 	TableBody as MuiTableBody,
 	TableRow,
 	TableRowColumn
-} from 'material-ui/Table';
+} from '@material-ui/Table';
 
 
 export default class TableBody extends Component {

@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import LeagueTabs from './leagueTabs/leagueTabs.jsx';
 import LeagueTabsHeader from './leagueTabs/leagueTabsHeader.jsx';
 import { cssContent, cssDashboard } from '../styles';
-import CircularProgress from 'material-ui/CircularProgress';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 
 class Dashboard extends Component {
