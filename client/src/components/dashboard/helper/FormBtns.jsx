@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { reset } from 'redux-form';
-import RaisedButton from '@material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 
 const btnContainerStyle = {
 	position: 'absolute',
@@ -21,13 +21,13 @@ const FormButtons = props => {
 
 	return (
 		<div style={btnContainerStyle}>
-			<RaisedButton
+			<Button
 				label='Reset'
 				onClick={() => dispatch(reset(formName))}
 				secondary={true}
 				style={{marginRight: 10}}
 			/>
-			<RaisedButton
+			<Button
 				label={submitLabel}
 				primary={true}
 				type='submit'

@@ -1,10 +1,11 @@
 import React from 'react';
-import { TextField, SelectField } from '../redux_form_mui/replacement';
-import MenuItem from '@material-ui/MenuItem';
+import { TextField, Select } from '../../../redux_form_mui/replacement';
+import MenuItem from '@material-ui/core/MenuItem';
 import PropTypes from 'prop-types';
-import RaisedButton from '@material-ui/RaisedButton';
-import IconButton from '@material-ui/IconButton';
-import HelpOutline from '@material-ui/svg-icons/action/help-outline';
+// was RaisedButton
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import HelpOutline from '@material-ui/icons/HelpOutline';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 
@@ -35,10 +36,10 @@ const AddStaffForm = props => {
 					<HelpOutline />
 				</IconButton>
 				<Field
-					component={SelectField}
+					component={Select}
 					hintText='Choose Role'
 					name='role'
-					style={cssDashboard.settings.forms.add.selectField}
+					style={cssDashboard.settings.forms.add.Select}
 					>
 					{
 						roles.map((role, i) =>
@@ -55,7 +56,7 @@ const AddStaffForm = props => {
 					style={cssDashboard.settings.forms.add.textField}
 					validate={uniqueEmailVal.bind(null, props.staff)}
 				/>
-				<RaisedButton
+				<Button
 					backgroundColor={cssDashboard.raisedButton.backgroundColor}
 					label='Add Staff Member'
 					labelStyle={cssDashboard.raisedButton.label}

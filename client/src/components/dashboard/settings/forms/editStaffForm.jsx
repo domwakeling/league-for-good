@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { TextField, SelectField } from '../redux_form_mui/replacement';
-import MenuItem from '@material-ui/MenuItem';
+import { TextField, Select } from '../../../redux_form_mui/replacement';
+import MenuItem from '@material-ui/core/MenuItem';
 import { Field, reduxForm } from 'redux-form';
 import { updateStaff, openSnackbar } from '../../../../actions/index';
 
@@ -14,7 +14,7 @@ const EditStaffForm = (props) => {
 	return (
 		<form style={cssDashboard.teams.forms.edit.style}>
 			<Field
-				component={SelectField}
+				component={Select}
 				hintText='Choose Role'
 				name='role'
 				style={cssDashboard.settings.forms.edit.selectField}

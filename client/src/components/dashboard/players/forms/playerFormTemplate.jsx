@@ -2,9 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Field, reduxForm, propTypes as rfProps } from 'redux-form';
-import { TextField, SelectField} from '../redux_form_mui/replacement';
-import MenuItem from '@material-ui/MenuItem';
-import RaisedButton from '@material-ui/RaisedButton';
+import { TextField, Select} from '../../../redux_form_mui/replacement';
+import MenuItem from '@material-ui/core/MenuItem';
+// was a RaisedButton
+import Button from '@material-ui/core/Button';
 import { getFormVals } from './playerFormData.selector';
 // import { openSnackbar } from '../../../../actions/index';
 import { cssContent, cssDashboard } from '../../../styles';
@@ -85,7 +86,7 @@ let PlayerFormTemplate = props => {
 				</div>
 				<div style={cssDashboard.formRow}>
 					<Field
-						component={SelectField}
+						component={Select}
 						floatingLabelText='Team'
 						name='team.teamId'
 						style={{maxHeight: 150}}
@@ -122,7 +123,7 @@ let PlayerFormTemplate = props => {
 					name='originalTeam'
 					type='hidden'
 				/>
-				<RaisedButton
+				<Button
 					backgroundColor={cssDashboard.raisedButton.backgroundColor}
 					label={buttonLabel || 'Submit'}
 					labelStyle={cssDashboard.raisedButton.label}

@@ -5,8 +5,8 @@ import { getRoster } from './rosterData';
 
 import TableTemplate from '../../helper/tableTemplate/tableTemplate.jsx';
 import { cssContent } from '../../../styles';
-import IconButton from '@material-ui/IconButton';
-import BackArrow from '@material-ui/svg-icons/navigation/arrow-back';
+import IconButton from '@material-ui/core/IconButton';
+import BackArrow from '@material-ui/icons/ArrowBack';
 
 
 const Roster = ({roster, history}) => {

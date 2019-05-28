@@ -5,7 +5,7 @@ import {
 	ToolbarGroup,
 	ToolbarSeparator,
 	ToolbarTitle
-} from '@material-ui/Toolbar';
+} from '@material-ui/core/Toolbar';
 import { cssDashboard } from '../../styles';
 
 

@@ -8,8 +8,9 @@ import {
 	SEASON_GAME_LIST,
 	makeLinkDynamic
 } from '../../../routes';
-import IconButton from '@material-ui/IconButton';
-import ListIcon from '@material-ui/svg-icons/action/list';
+import IconButton from '@material-ui/core/IconButton';
+// this used to be action-list, check if it's changed appearance
+import ListIcon from '@material-ui/icons/ViewList';
 import { cssDashboard } from '../../../styles';
 
 function handleClick(props, url) {

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import FlatButton from '@material-ui/FlatButton';
+// was FlatButton
+import Button from '@material-ui/core/Button';
 
 import { cssCreateLeague } from '../styles';
 
@@ -19,7 +20,7 @@ CreateLeagueIcon.defaultProps = {
 
 // League Button with icon for create league form
 export const CreateLeagueButton = ({active, icon, label, onClick}) => (
-	<FlatButton
+	<Button
 		backgroundColor={active ?
 			cssCreateLeague.sportButton.active :
 			cssCreateLeague.sportButton.inactive}

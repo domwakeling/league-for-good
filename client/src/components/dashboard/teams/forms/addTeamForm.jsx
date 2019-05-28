@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextField } from '../redux_form_mui/replacement';
-import RaisedButton from '@material-ui/RaisedButton';
+import { TextField } from '../../../redux_form_mui/replacement';
+import Button from '@material-ui/core/Button';
 import { Field, reduxForm } from 'redux-form';
 
 import { createTeam, openSnackbar } from '../../../../actions/index';
@@ -27,7 +27,7 @@ const AddTeamForm = props => {
 					hintText='Team name'
 					name='name'
 				/>
-				<RaisedButton
+				<Button
 					backgroundColor={cssDashboard.raisedButton.backgroundColor}
 					label='Create Team'
 					labelStyle={cssDashboard.raisedButton.label}

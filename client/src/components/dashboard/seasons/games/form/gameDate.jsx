@@ -5,7 +5,7 @@ import {
 	TextField,
 	TimePicker,
 	DatePicker
-} from '../redux_form_mui/replacement';
+} from '../../../../redux_form_mui/replacement';
 
 
 const GameDate = () => (

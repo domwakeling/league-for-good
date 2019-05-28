@@ -4,8 +4,8 @@ import { cssContent, cssDashboard } from '../../../styles';
 
 import { connect } from 'react-redux';
 
-import IconButton from '@material-ui/IconButton';
-import BackArrow from '@material-ui/svg-icons/navigation/arrow-back';
+import IconButton from '@material-ui/core/IconButton';
+import BackArrow from '@material-ui/icons/ArrowBack';
 
 const Player = ({ player, history }) => {
 

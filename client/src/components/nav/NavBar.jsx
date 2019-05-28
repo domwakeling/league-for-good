@@ -19,6 +19,7 @@ class NavBar extends Component {
 		this.state = {
 			themeMenuOpen: false
 		};
+
 	}
 
 	selectLeague = league => {

@@ -7,6 +7,6 @@ export { default as Checkbox } from './Checkbox.jsx';
 export { default as TextField } from './TextField.jsx';
 export { default as TimePicker } from './TimePicker.jsx';
 export { default as DatePicker } from './DatePicker.jsx';
-export { default as SelectField } from './SelectField.jsx';
+export { default as Select } from './Select.jsx';
 export { default as AutoComplete } from './AutoComplete.jsx';
-export { default as RadioButtonGroup } from './RadioButtonGroup.jsx';
+export { default as RadioGroup } from './RadioGroup.jsx';

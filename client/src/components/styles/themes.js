@@ -11,34 +11,54 @@ const fullBlack = 'rgba(0, 0, 0, 1)';
 
 // These theme values are only used as main colors in components
 // Accent colors remain the same for smaller components
-// - primary1Color = default
-// - primary2Color = dark
-// - primary3Color = light
-// - pickerHeaderColor = should be same as primary1Color
-// - canvasColor = should be same as primary3Color
+// - primary
+//   - main, dark, light
+// - primary1Color = should be the same as primary.main
+
 const themeValues = {
 	lightgreen: {
 		primary1Color: '#8BC34A',
-		primary2Color: '#689F38',
-		primary3Color: '#DCEDC8',
-		pickerHeaderColor: '#8BC34A',
-		canvasColor: '#DCEDC8'
+		// primary2Color: '#689F38',
+		// primary3Color: '#DCEDC8',
+		// pickerHeaderColor: '#8BC34A',
+		// canvasColor: '#DCEDC8',
+		primary: {
+			main: '#8BC34A',
+			dark: '#689F38',
+			light: '#DCEDC8'
+			// pickerHeaderColor: '#8BC34A',
+			// canvasColor: '#DCEDC8'
+		}
 	},
 
 	teal: {
 		primary1Color: '#009688',
-		primary2Color: '#00796B',
-		primary3Color: '#B2DFDB',
-		pickerHeaderColor: '#009688',
-		canvasColor: '#B2DFDB'
+		// primary2Color: '#00796B',
+		// primary3Color: '#B2DFDB',
+		// pickerHeaderColor: '#009688',
+		// canvasColor: '#B2DFDB',
+		primary: {
+			main: '#009688',
+			dark: '#00796B',
+			light: '#B2DFDB'
+			// pickerHeaderColor: '#009688',
+			// canvasColor: '#B2DFDB'
+		}
 	},
 
 	lightblue: {
 		primary1Color: '#03A9F4',
-		primary2Color: '#0288D1',
-		primary3Color: '#B3E5FC',
-		pickerHeaderColor: '#03A9F4',
-		canvasColor: '#B3E5FC'
+		// primary2Color: '#0288D1',
+		// primary3Color: '#B3E5FC',
+		// pickerHeaderColor: '#03A9F4',
+		// canvasColor: '#B3E5FC',
+		primary: {
+			main: '#03A9F4',
+			dark: '#0288D1',
+			light: '#B3E5FC'
+			// pickerHeaderColor: '#03A9F4',
+			// canvasColor: '#B3E5FC'
+		}
 	}
 };
 
@@ -46,8 +66,12 @@ const themeValues = {
 const defaultTheme = 'lightblue';
 
 const textMixin = {
-	textColor: '#000000',
-	alternateTextColor: '#ffffff'
+	// textColor: '#000000',
+	// alternateTextColor: '#ffffff'
+	text: {
+		primary: '#000000',
+		secondary: '#ffffff'
+	}
 };
 
 // - accent1Color = default
@@ -73,7 +97,10 @@ const warningMixin = {
 };
 
 const infoMixin = {
-	info: '#a9a9a9'
+	// info: '#a9a9a9'
+	text: {
+		hint: '#a9a9a9'
+	}
 };
 
 const themes = (function(themeValues, defaultTheme, ...mixins) {

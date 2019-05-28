@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ArrowUp from '@material-ui/svg-icons/navigation/arrow-drop-up';
-import ArrowDown from '@material-ui/svg-icons/navigation/arrow-drop-down';
+import ArrowUp from '@material-ui/icons/ArrowDropUp';
+import ArrowDown from '@material-ui/icons/ArrowDropDown';
 import { cssDashboard } from '../../../styles';
 
 // IMPORTED STYLES

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import MenuItem from '@material-ui/MenuItem';
+import MenuItem from '@material-ui/core/MenuItem';
 import { Field } from 'redux-form';
 import { cssDashboard } from '../../../../styles';
-import { SelectField } from '../redux_form_mui/replacement';
+import { Select } from '../../../../redux_form_mui/replacement';
 
 const renderTeams = teams =>
 	teams.map(team => (
@@ -19,7 +19,7 @@ const renderTeams = teams =>
 export const TeamDropdowns = props => (
 	<div style={cssDashboard.formRow}>
 			<Field
-				component={SelectField}
+				component={Select}
 				floatingLabelText='Home Team'
 				hintText='Select the home team'
 				name='homeTeamId'
@@ -30,7 +30,7 @@ export const TeamDropdowns = props => (
 				}
 			</Field>
 			<Field
-				component={SelectField}
+				component={Select}
 				floatingLabelText='Opponent'
 				hintText='Select the an opponent'
 				name='awayTeamId'

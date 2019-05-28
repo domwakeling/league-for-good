@@ -1,6 +1,6 @@
 import React from 'react';
-import IconButton from '@material-ui/IconButton';
-import Brush from '@material-ui/svg-icons/image/brush';
+import IconButton from '@material-ui/core/IconButton';
+import Brush from '@material-ui/icons/Brush';
 import themes from '../styles/themes';
 import { cssAppBar as css } from '../styles';
 import PropTypes from 'prop-types';

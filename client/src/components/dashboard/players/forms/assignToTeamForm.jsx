@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
-import { AutoComplete, TextField } from '../redux_form_mui/replacement';
-import RaisedButton from '@material-ui/RaisedButton';
+import { AutoComplete, TextField } from '../../../redux_form_mui/replacement';
+import Button from '@material-ui/core/Button';
 import { getAssignFormVals } from './playerFormData.selector';
 import { assignPlayer, openSnackbar } from '../../../../actions/index';
 import { cssContent, cssDashboard } from '../../../styles';
@@ -67,7 +67,7 @@ let AssignPlayerForm = props => {
 					name='team.season'
 					type='hidden'
 				/>
-				<RaisedButton
+				<Button
 					backgroundColor={cssDashboard.raisedButton.backgroundColor}
 					label='Assign Player'
 					labelStyle={cssDashboard.raisedButton.label}

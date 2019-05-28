@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import RaisedButton from '@material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 import { Field, reduxForm } from 'redux-form';
 
 import { createSeason, openSnackbar } from '../../../../actions/index';
@@ -13,7 +13,7 @@ import {
 	TextField,
 	DatePicker,
 	Checkbox
-} from '../redux_form_mui/replacement';
+} from '../../../redux_form_mui/replacement';
 
 
 const AddSeasonForm = props => {
@@ -65,7 +65,7 @@ const AddSeasonForm = props => {
 							/>
 						</div>
 					</div>
-					<RaisedButton
+					<Button
 						backgroundColor={cssDashboard.raisedButton.backgroundColor}
 						label='Create Season'
 						labelStyle={cssDashboard.raisedButton.label}

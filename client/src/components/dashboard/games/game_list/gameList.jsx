@@ -6,10 +6,9 @@ import { fetchGames } from '../../../../actions/index';
 import PropTypes from 'prop-types';
 import { cssContent } from '../../../styles';
 import TableTemplate from '../../helper/tableTemplate/tableTemplate.jsx';
-import RaisedButton from '@material-ui/RaisedButton';
-// import ContentAdd from '@material-ui/svg-icons/content/add';
+// was a RaisedButton
+import Button from '@material-ui/core/Button';
 import { makeTable } from './data';
-// import { Link } from 'react-router-dom';
 import { NEW_GAME as route } from '../../../routes';
 
 function formatSubtitle(season) {
@@ -26,7 +25,7 @@ const GameList = props => {
 		<div style={cssContent.body}>
 			{
 				props.season.active &&
-				<RaisedButton
+				<Button
 					label='New Game'
 					onClick={() => props.history.push({pathname: route, state: {season}})}
 					primary={true}

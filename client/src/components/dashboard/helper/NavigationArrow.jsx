@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/IconButton';
-import BackArrow from '@material-ui/svg-icons/navigation/arrow-back';
+import IconButton from '@material-ui/core/IconButton';
+import BackArrow from '@material-ui/icons/ArrowBack';
 import { withRouter } from 'react-router-dom';
 
 /*

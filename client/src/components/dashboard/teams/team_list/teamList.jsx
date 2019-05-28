@@ -4,8 +4,9 @@ import PropTypes from 'prop-types';
 
 import { cssContent, cssDashboard } from '../../../styles';
 import TableTemplate from '../../helper/tableTemplate/tableTemplate.jsx';
-import MenuItem from '@material-ui/MenuItem';
-import DropDownMenu from '@material-ui/DropDownMenu';
+import MenuItem from '@material-ui/core/MenuItem';
+// TODO: this used to be a DropDownMenu, check it still works
+import Popper from '@material-ui/core/Popper';
 
 import { configTeamForTable } from './teamData';
 
@@ -48,7 +49,7 @@ class TeamTable extends Component {
 
 		return (
 			<div style={cssContent.body}>
-				<DropDownMenu
+				<Popper
 					onChange={this.handleChange}
 					style={cssDashboard.table.teams.dropdown}
 					value={this.state.filterValue}
@@ -56,7 +57,7 @@ class TeamTable extends Component {
 					<MenuItem primaryText='All Teams' value='all' />
 					<MenuItem primaryText='Active Teams' value='active' />
 					<MenuItem primaryText='Archived Teams' value='archived' />
-				</DropDownMenu>
+				</Popper>
 				<TableTemplate
 					headers={this.props.headers}
 					rows={this.filterTeams()}

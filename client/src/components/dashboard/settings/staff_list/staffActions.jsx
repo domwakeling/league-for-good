@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import IconButton from '@material-ui/IconButton';
-import EditIcon from '@material-ui/svg-icons/image/edit';
-import DeleteIcon from '@material-ui/svg-icons/action/delete';
+import IconButton from '@material-ui/core/IconButton';
+import EditIcon from '@material-ui/icons/Edit';
+import DeleteIcon from '@material-ui/icons/Delete';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { cssDashboard } from '../../../styles';

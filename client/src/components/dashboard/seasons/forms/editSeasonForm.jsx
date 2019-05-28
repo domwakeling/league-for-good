@@ -4,7 +4,7 @@ import { editSeason, openSnackbar } from '../../../../actions/index';
 import { cssDashboard } from '../../../styles';
 import validate from './utils/validation';
 import getFormattedDate from './utils/formatDate';
-import { TextField, DatePicker } from '../redux_form_mui/replacement';
+import { TextField, DatePicker } from '../../../redux_form_mui/replacement';
 
 // DatePicker component will throw an error if
 // you pass in an initial value of a number which is

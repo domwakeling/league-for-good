@@ -1,14 +1,12 @@
 // Store all the information for the links for each tab
 import React from 'react';
-import AddIcon from '@material-ui/svg-icons/content/add';
-import AddPersonIcon from '@material-ui/svg-icons/social/person-add';
-// import DeleteForeverIcon from '@material-ui/svg-icons/action/delete-forever';
-import ModeEditIcon from '@material-ui/svg-icons/editor/mode-edit';
-import EmailIcon from '@material-ui/svg-icons/communication/email';
-import AssignmentIcon from '@material-ui/svg-icons/action/assignment';
-import ListIcon from '@material-ui/svg-icons/action/view-list';
-import ArchiveIcon from '@material-ui/svg-icons/content/archive';
-// import EventIcon from '@material-ui/svg-icons/action/event';
+import AddIcon from '@material-ui/icons/Add';
+import AddPersonIcon from '@material-ui/icons/PersonAdd';
+import ModeEditIcon from '@material-ui/icons/Edit';
+import EmailIcon from '@material-ui/icons/Email';
+import AssignmentIcon from '@material-ui/icons/Assignment';
+import ListIcon from '@material-ui/icons/ViewList';
+import ArchiveIcon from '@material-ui/icons/Archive';
 
 import * as LINK from '../../routes';
 

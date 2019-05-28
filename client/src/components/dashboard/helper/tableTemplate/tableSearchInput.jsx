@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import TextField from '@material-ui/TextField';
-import SearchIcon from '@material-ui/svg-icons/action/search';
+import TextField from '@material-ui/core/TextField';
+import SearchIcon from '@material-ui/icons/Search';
 import { cssDashboard } from '../../../styles';
 
 // Optional search for the table template

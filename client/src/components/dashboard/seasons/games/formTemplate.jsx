@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Navigation from '../../helper/NavigationArrow.jsx';
 
-import RaisedButton from '@material-ui/RaisedButton';
-import MenuItem from '@material-ui/MenuItem';
+// was a RaisedButton
+import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
 import { Field } from 'redux-form';
 
 
@@ -12,9 +13,9 @@ import { cssContent, cssDashboard } from '../../../styles';
 
 import {
 	TextField,
-	SelectField,
+	Select,
 	DatePicker
-} from '../redux_form_mui/replacement';
+} from '../../../redux_form_mui/replacement';
 
 
 export default class FormTemplate extends React.Component {
@@ -68,7 +69,7 @@ export default class FormTemplate extends React.Component {
 					<br/>
 					<div style={cssDashboard.formRow}>
 						<Field
-							component={SelectField}
+							component={Select}
 							floatingLabelText='Home Team'
 							hintText='Select the home team'
 							name='homeTeamId'
@@ -86,7 +87,7 @@ export default class FormTemplate extends React.Component {
 							}
 						</Field>
 						<Field
-							component={SelectField}
+							component={Select}
 							floatingLabelText='Opponent'
 							hintText='Select the an opponent'
 							name='awayTeamId'
@@ -104,13 +105,13 @@ export default class FormTemplate extends React.Component {
 							}
 						</Field>
 					</div>
-					<RaisedButton
+					<Button
 						label='Submit'
 						primary={true}
 						style={{marginRight: 5}}
 						type='submit'
 					/>
-					<RaisedButton
+					<Button
 						label='Reset'
 						onClick={reset}
 						secondary={true}

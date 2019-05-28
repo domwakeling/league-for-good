@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field, reduxForm } from 'redux-form';
-import { TextField } from '../redux_form_mui/replacement';
+import { TextField } from '../../../redux_form_mui/replacement';
 
 import { cssContent, cssDashboard } from '../../../styles';
-import RaisedButton from '@material-ui/RaisedButton';
+import Button from '@material-ui/core/Button';
 import { editLeague, openSnackbar } from '../../../../actions/index';
 import { connect } from 'react-redux';
 
@@ -26,7 +26,7 @@ const EditLeageNameForm = props => {
                 name='leagueName'
                 style={cssDashboard.settings.forms.add.textField}
             />
-            <RaisedButton
+            <Button
                 backgroundColor={cssDashboard.raisedButton.backgroundColor}
                 label='Change League Name'
                 labelStyle={cssDashboard.raisedButton.label}

@@ -1,15 +1,12 @@
 import React from 'react';
 import propTypes from 'prop-types';
 import { Field } from 'redux-form';
-import {List, ListItem} from '@material-ui/List';
-// import ActionInfo from '@material-ui/svg-icons/action/info';
-// import Divider from '@material-ui/Divider';
-import Subheader from '@material-ui/Subheader';
-import { Checkbox } from '../redux_form_mui/replacement';
+import {List, ListItem} from '@material-ui/core/List';
+import { Checkbox } from '../../../../redux_form_mui/replacement';
 
 const PlayerList = ({ teamName, players }) => (
-	<List>
-		<Subheader>{teamName}</Subheader>
+	<List subheader={teamName}>
+		{/* <Subheader>{teamName}</Subheader> */}
 		{
 			players.map((player, i) => (
 					<ListItem

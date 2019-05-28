@@ -1,5 +1,6 @@
 import React from 'react';
-import AppBar from '@material-ui/AppBar';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
 import ThemeMenu from './ThemeMenu.jsx';
 import { cssAppBar as css } from '../styles';
 import PropTypes from 'prop-types';
@@ -25,15 +26,19 @@ ThemeIcon.propTypes = {
 const Bar = props => {
 	const { toggleMenu, ...iconProps } = props;
 	return (
-		<AppBar
-			iconElementRight={ <ThemeIcon {...iconProps} />}
-			iconStyleLeft={css.text}
-			onLeftIconButtonClick={toggleMenu}
-			onLeftIconButtonClick={toggleMenu}
-			style={css.main}
-			title='League For Good'
-			titleStyle={css.text}
-		/>
+		<AppBar style={css.main}>
+			<Toolbar style={css.text}>
+				League For Good
+				<ThemeMenu {...iconProps} />
+			</Toolbar>
+		</AppBar>
+		// 	iconElementRight={ <ThemeIcon {...iconProps} />}
+		// 	iconStyleLeft={css.text}
+		// 	onLeftIconButtonClick={toggleMenu}
+		// 	onLeftIconButtonClick={toggleMenu}
+		// 	style={css.main}
+			// title='League For Good'
+			// titleStyle={css.text}
 	);
 };
 

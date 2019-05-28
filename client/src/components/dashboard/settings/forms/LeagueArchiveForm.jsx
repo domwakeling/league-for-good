@@ -1,6 +1,6 @@
 import React from 'react';
 import { Field, reduxForm } from 'redux-form';
-import { Checkbox } from '../redux_form_mui/replacement';
+import { Checkbox } from '../../../redux_form_mui/replacement';
 import PropTypes from 'prop-types';
 
 import { cssContent, cssDashboard } from '../../../styles';

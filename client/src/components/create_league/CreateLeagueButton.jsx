@@ -1,7 +1,8 @@
 /* eslint-disable react/no-multi-comp */
 import React from 'react';
 import PropTypes from 'prop-types';
-import FlatButton from '@material-ui/FlatButton';
+// was FlatButton
+import Button from '@material-ui/core/Button';
 
 import { cssCreateLeague } from '../styles';
 import CreateLeagueIcon from './CreateLeagueIcon.jsx';
@@ -9,7 +10,7 @@ import CreateLeagueIcon from './CreateLeagueIcon.jsx';
 const CreateLeagueButton = (props) => {
 	const { active, icon, label, onClick } = props;
 	return (
-		<FlatButton
+		<Button
 			backgroundColor={active ?
 				cssCreateLeague.sportButton.active :
 				cssCreateLeague.sportButton.inactive}

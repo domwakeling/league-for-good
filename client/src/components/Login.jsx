@@ -1,10 +1,10 @@
 import React from 'react';
-import Dialog from '@material-ui/Dialog';
-import RaisedButton from '@material-ui/RaisedButton';
+import Dialog from '@material-ui/core/Dialog';
+import Button from '@material-ui/core/Button';
 import { cssLogin } from './styles';
 
-const Button = () => (
-	<RaisedButton
+const UnusedButton = () => (
+	<Button
 		backgroundColor={cssLogin.raisedButton.backgroundColor}
 		href='/auth/google'
 		label='Login'

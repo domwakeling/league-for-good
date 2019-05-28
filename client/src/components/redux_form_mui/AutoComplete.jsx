@@ -1,11 +1,12 @@
 // adapted from redux-form-material-ui, which does not support MUI above v0.20
 // https://www.npmjs.com/package/redux-form-material-ui
 
-import AutoComplete from '@material-ui/core/AutoComplete'
-import createComponent from './createComponent'
-import mapError from './mapError'
+// TODO: fix AUtoComplete
+import { TextField } from '@material-ui/core';
+import createComponent from './createComponent';
+import mapError from './mapError';
 
-export default createComponent(AutoComplete, ({
+export default createComponent(TextField, ({
     input: { onChange, value },
     onNewRequest,
     dataSourceConfig,
@@ -21,14 +22,14 @@ export default createComponent(AutoComplete, ({
             typeof value === 'object' && dataSourceConfig
                 ? value[dataSourceConfig.value]
                 : value
-        )
+        );
         if (onNewRequest) {
-            onNewRequest(value, index)
+            onNewRequest(value, index);
         }
     },
     onUpdateInput: value => {
         if (!dataSourceConfig) {
-            onChange(value)
+            onChange(value);
         }
     }
-}))
+}));

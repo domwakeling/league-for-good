@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import Dialog from '@material-ui/Dialog';
-import RaisedButton from '@material-ui/RaisedButton';
+import Dialog from '@material-ui/core/Dialog';
+import Button from '@material-ui/core/Button';
 
 import { submit } from 'redux-form';
 
@@ -44,14 +44,14 @@ class Modal extends Component {
 		const handleSubmit = this.getAction().handleSubmit;
 
 		const actions = [
-			<RaisedButton
+			<Button
 				backgroundColor={cssModal.raisedButton.backgroundColor}
 				label={actionLabel || 'Submit'}
 				labelStyle={cssModal.raisedButton.label}
 				onClick={() => handleSubmit(data)}
 				style={cssModal.raisedButton.style}
 			/>,
-			<RaisedButton
+			<Button
 				backgroundColor={cssModal.raisedButton.backgroundColor}
 				label='Cancel'
 				labelStyle={cssModal.raisedButton.label}

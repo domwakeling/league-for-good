@@ -18,7 +18,7 @@ const App = props => {
 	const { palette } = props;
 
 	return (
-		<ThemeProvider muiTheme={createMuiTheme({ palette })}>
+		<ThemeProvider theme={createMuiTheme({ palette: palette })}>
 			<Router>
 				<div>
 					<Route component={requireAuth(Content)} path='/' />

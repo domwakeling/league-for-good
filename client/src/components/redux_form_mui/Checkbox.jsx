@@ -1,8 +1,8 @@
 // adapted from redux-form-material-ui, which does not support MUI above v0.20
 // https://www.npmjs.com/package/redux-form-material-ui
 
-import Checkbox from '@material-ui/core/Checkbox'
-import createComponent from './createComponent'
+import Checkbox from '@material-ui/core/Checkbox';
+import createComponent from './createComponent';
 
 export default createComponent(Checkbox, ({
     input: { onChange, value, ...inputProps },
@@ -15,9 +15,9 @@ export default createComponent(Checkbox, ({
     ...props,
     checked: value ? true : false,
     onCheck: (event, isInputChecked) => {
-        onChange(isInputChecked)
+        onChange(isInputChecked);
         if (onCheck) {
-            onCheck(isInputChecked)
+            onCheck(isInputChecked);
         }
     }
-}))
+}));
