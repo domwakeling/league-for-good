@@ -17,7 +17,7 @@ const fullBlack = 'rgba(0, 0, 0, 1)';
 
 const themeValues = {
 	lightgreen: {
-		primary1Color: '#8BC34A',
+		// primary1Color: '#8BC34A',
 		// primary2Color: '#689F38',
 		// primary3Color: '#DCEDC8',
 		// pickerHeaderColor: '#8BC34A',
@@ -32,7 +32,7 @@ const themeValues = {
 	},
 
 	teal: {
-		primary1Color: '#009688',
+		// primary1Color: '#009688',
 		// primary2Color: '#00796B',
 		// primary3Color: '#B2DFDB',
 		// pickerHeaderColor: '#009688',
@@ -47,7 +47,7 @@ const themeValues = {
 	},
 
 	lightblue: {
-		primary1Color: '#03A9F4',
+		// primary1Color: '#03A9F4',
 		// primary2Color: '#0288D1',
 		// primary3Color: '#B3E5FC',
 		// pickerHeaderColor: '#03A9F4',
@@ -78,9 +78,14 @@ const textMixin = {
 // - accent2Color = dark
 // - accent3Color = light
 const accentMixin = {
-	accent1Color: '#455a64',
-	accent2Color: '#1c313a',
-	accent3Color: '#718792'
+	// accent1Color: '#455a64',
+	// accent2Color: '#1c313a',
+	// accent3Color: '#718792'
+	secondary: {
+		main: '#455a64',
+		dark: '#1c313a',
+		light: '#718792'
+	}
 };
 
 // extra colors required for the palette

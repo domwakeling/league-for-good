@@ -28,7 +28,7 @@ const Bar = props => {
 	return (
 		<AppBar style={css.main}>
 			<Toolbar style={css.text}>
-				League For Good
+				<h1>League For Good</h1>
 				<ThemeMenu {...iconProps} />
 			</Toolbar>
 		</AppBar>

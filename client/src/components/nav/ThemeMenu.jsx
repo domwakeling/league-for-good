@@ -21,8 +21,8 @@ function generateThemeIcons(themeList, themeNames, changeTheme) {
 				style={({
 					...css.themeMenuItem,
 					...{
-						backgroundColor: themeList[themeName].primary1Color,
-						border: '2px solid ' + themeList[themeName].accent1Color
+						backgroundColor: themeList[themeName].primary.main,
+						border: '2px solid ' + themeList[themeName].secondary.main
 					}})
 				}
 			/>

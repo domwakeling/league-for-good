@@ -10,11 +10,13 @@ export const cssAppBar = {
 		position: 'fixed'
 	},
 	text: {
-		color: theme.alternateTextColor,
+		// color: theme.alternateTextColor,
+		color: theme.text.secondary,
 		letterSpacing: 2
 	},
 	iconStyle: {
-		color: theme.alternateTextColor
+		// color: theme.alternateTextColor
+		color: theme.text.secondary
 	},
 	themeMenuItem: {
 		display: 'inline-block',
