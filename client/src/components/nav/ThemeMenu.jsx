@@ -22,7 +22,8 @@ function generateThemeIcons(themeList, themeNames, changeTheme) {
 					...css.themeMenuItem,
 					...{
 						backgroundColor: themeList[themeName].primary.main,
-						border: '2px solid ' + themeList[themeName].secondary.main
+						border: '2px solid ' + themeList[themeName].secondary.main,
+						verticalAlign: 'middle'
 					}})
 				}
 			/>
@@ -41,8 +42,8 @@ const ThemeMenu = (props) => {
 			}
 			<IconButton
 				disableTouchRipple={true}
-				iconStyle={css.iconStyle}
 				onClick={props.themeMenuToggle}
+				style={css.iconStyle}
 				>
 				<Brush />
 			</IconButton>

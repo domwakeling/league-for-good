@@ -7,12 +7,14 @@ const theme = themes.getCurrentThemeProps();
 export const cssAppBar = {
 	main: {
 		zIndex: 2000,
-		position: 'fixed'
+		position: 'fixed',
+		flexGrow: 1
 	},
 	text: {
 		// color: theme.alternateTextColor,
 		color: theme.text.secondary,
-		letterSpacing: 2
+		letterSpacing: 2,
+		flexGrow: 1
 	},
 	iconStyle: {
 		// color: theme.alternateTextColor

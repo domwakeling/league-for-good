@@ -1,6 +1,8 @@
 import React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
 import ThemeMenu from './ThemeMenu.jsx';
 import { cssAppBar as css } from '../styles';
 import PropTypes from 'prop-types';
@@ -27,18 +29,19 @@ const Bar = props => {
 	const { toggleMenu, ...iconProps } = props;
 	return (
 		<AppBar style={css.main}>
-			<Toolbar style={css.text}>
-				<h1>League For Good</h1>
-				<ThemeMenu {...iconProps} />
+			<Toolbar>
+				<IconButton
+					aria-label='Menu'
+					color='inherit'
+					edge='start'
+					onClick={toggleMenu}
+					>
+					<MenuIcon style={css.iconStyle}/>
+				</IconButton>
+				<h3 style={css.text}>League For Good</h3>
+				<ThemeMenu {...iconProps} style={css.iconStyle}/>
 			</Toolbar>
 		</AppBar>
-		// 	iconElementRight={ <ThemeIcon {...iconProps} />}
-		// 	iconStyleLeft={css.text}
-		// 	onLeftIconButtonClick={toggleMenu}
-		// 	onLeftIconButtonClick={toggleMenu}
-		// 	style={css.main}
-			// title='League For Good'
-			// titleStyle={css.text}
 	);
 };
 

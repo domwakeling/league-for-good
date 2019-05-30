@@ -19,7 +19,8 @@ const Content = props => {
 		<div>
 			<NavBar changeTheme={props.changeTheme} />
 			<div className={contentWrapperClass}>
-				<Paper style={cssContent.paper} zDepth={3}>
+				<Paper style={cssContent.paper} >
+					{/* Previously zDepth of Paper was set to 3, may not be important */}
 					This is a test
 					{/* <Route component={Dashboard} path='/dashboard' />
 					<Route component={CreateLeagueForm} path='/create' />
