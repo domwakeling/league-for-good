@@ -27,6 +27,7 @@ export const cssAppBar = {
 		height: '25px',
 		marginRight: '5px',
 		cursor: 'pointer',
-		boxSizing: 'border-box'
+		boxSizing: 'border-box',
+		verticalAlign: 'middle'
 	}
 };

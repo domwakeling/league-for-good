@@ -19,12 +19,10 @@ const Content = props => {
 		<div>
 			<NavBar changeTheme={props.changeTheme} />
 			<div className={contentWrapperClass}>
-				<Paper style={cssContent.paper} >
-					{/* Previously zDepth of Paper was set to 3, may not be important */}
-					This is a test
-					{/* <Route component={Dashboard} path='/dashboard' />
+				<Paper style={({...cssContent.paper, ...{zDepth: 3} })}>
+					<Route component={Dashboard} path='/dashboard' />
 					<Route component={CreateLeagueForm} path='/create' />
-					<Route component={Help} path='/help' /> */}
+					<Route component={Help} path='/help' />
 				</Paper>
 			</div>
 			<Modal />

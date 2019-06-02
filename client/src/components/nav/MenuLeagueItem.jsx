@@ -1,7 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
-// import ListItem from '@material-ui/core/ListItem';
 import ListItemLink from '../utils/ListItemLink.jsx';
 import * as Links from '../routes';
 

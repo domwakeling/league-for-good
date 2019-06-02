@@ -31,6 +31,12 @@ const Menu = (props) => {
 		setOpen(!openArchive);
 	}
 
+	// use React hook to replace componentDidMount, pass empty array to prevent
+	// the effect from continuing to fire whenever an update takes place
+	React.useEffect(() => {
+		setOpen(false);
+	}, []);
+
 	return (
 		<Drawer open={open} variant='persistent' width={'15%'}>
 			<List style={cssMenu.drawer.list}>
