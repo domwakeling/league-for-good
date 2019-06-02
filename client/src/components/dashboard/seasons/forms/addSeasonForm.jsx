@@ -13,7 +13,7 @@ import {
 	TextField,
 	DatePicker,
 	Checkbox
-} from '../../../redux_form_mui/replacement';
+} from '../../../utils/redux_form_mui/replacement';
 
 
 const AddSeasonForm = props => {

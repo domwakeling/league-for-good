@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
 import Button from '@material-ui/core/Button';
 
 import { submit } from 'redux-form';
@@ -69,9 +70,10 @@ class Modal extends Component {
 					modal={false}
 					onRequestClose={this.handleClose}
 					open={open}
-					title={title}
-					titleStyle={cssModal.title}
+					// title={title}
+					// titleStyle={cssModal.title}
 					>
+					<DialogTitle style={cssModal.title}>{title}</DialogTitle>
 					{Children ? <Children {...data} /> : null}
 				</Dialog>
 			</div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField, Select } from '../../../redux_form_mui/replacement';
+import { TextField, Select } from '../../../utils/redux_form_mui/replacement';
 import MenuItem from '@material-ui/core/MenuItem';
 import PropTypes from 'prop-types';
 // was RaisedButton

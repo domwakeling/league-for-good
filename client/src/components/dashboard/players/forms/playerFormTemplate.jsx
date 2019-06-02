@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Field, reduxForm, propTypes as rfProps } from 'redux-form';
-import { TextField, Select} from '../../../redux_form_mui/replacement';
+import { TextField, Select} from '../../../utils/redux_form_mui/replacement';
 import MenuItem from '@material-ui/core/MenuItem';
 // was a RaisedButton
 import Button from '@material-ui/core/Button';

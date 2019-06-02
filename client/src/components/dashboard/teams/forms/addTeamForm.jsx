@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { TextField } from '../../../redux_form_mui/replacement';
+import { TextField } from '../../../utils/redux_form_mui/replacement';
 import Button from '@material-ui/core/Button';
 import { Field, reduxForm } from 'redux-form';
 

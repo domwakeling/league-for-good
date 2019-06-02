@@ -15,7 +15,7 @@ import {
 	TextField,
 	Select,
 	DatePicker
-} from '../../../redux_form_mui/replacement';
+} from '../../../utils/redux_form_mui/replacement';
 
 
 export default class FormTemplate extends React.Component {

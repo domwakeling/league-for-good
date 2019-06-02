@@ -8,7 +8,7 @@ import CreateLeagueForm from './create_league/CreateLeagueForm.jsx';
 import NavBar from './nav/NavBar.jsx';
 import Dashboard from './dashboard/dashboard.jsx';
 import Help from './help/help';
-import Modal from './modal/modal.jsx';
+import Modal from './modal/Modal.jsx';
 import {cssContent} from './styles';
 
 const Content = props => {
@@ -27,8 +27,8 @@ const Content = props => {
 					<Route component={Help} path='/help' /> */}
 				</Paper>
 			</div>
-			{/* <Modal /> */}
-			{/* <SnackBar /> */}
+			<Modal />
+			<SnackBar />
 		</div>
 	);
 };

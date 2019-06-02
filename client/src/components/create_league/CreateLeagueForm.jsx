@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
-import { TextField } from '../redux_form_mui/replacement';
+import { TextField } from '../utils/redux_form_mui/replacement';
 // was RaisedButton
 import Button from '@material-ui/core/Button';
 import { Field, reduxForm, formValueSelector } from 'redux-form';

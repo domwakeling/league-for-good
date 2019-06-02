@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { TextField, Select } from '../../../redux_form_mui/replacement';
+import { TextField, Select } from '../../../utils/redux_form_mui/replacement';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Field, reduxForm } from 'redux-form';
 import { updateStaff, openSnackbar } from '../../../../actions/index';
