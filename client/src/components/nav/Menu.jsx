@@ -28,7 +28,6 @@ const Menu = (props) => {
 
 	function handleClick(e) {
 		e.preventDefault();
-		console.log('Click');
 		setOpen(!openArchive);
 	}
 
@@ -59,7 +58,7 @@ const Menu = (props) => {
 								<ArchiveIcon style={cssMenu.icons} />
 							</ListItemIcon>
 							<ListItemText primary='Archive' />
-							{open ? <ExpandLess /> : <ExpandMore />}
+							{openArchive ? <ExpandLess /> : <ExpandMore />}
 						</ListItem>
 						<Collapse in={openArchive} timeout='auto' unmountOnExit={true}>
 							<List>
@@ -86,7 +85,7 @@ const Menu = (props) => {
 					primary='Help'
 					to='/help'
 				/>
-				<ListItem onClick={() => openModal('logout')}>
+				<ListItem button={true} onClick={() => openModal('logout')}>
 					<ListItemIcon>
 						<LogOutIcon style={cssMenu.icons} />
 					</ListItemIcon>
