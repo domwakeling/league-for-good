@@ -6,7 +6,7 @@ import { Route } from 'react-router-dom';
 import SnackBar from './snackbar.jsx';
 import CreateLeagueForm from './create_league/CreateLeagueForm.jsx';
 import NavBar from './nav/NavBar.jsx';
-import Dashboard from './dashboard/dashboard.jsx';
+import Dashboard from './dashboard/Dashboard.jsx';
 import Help from './help/help';
 import Modal from './modal/Modal.jsx';
 import {cssContent} from './styles';

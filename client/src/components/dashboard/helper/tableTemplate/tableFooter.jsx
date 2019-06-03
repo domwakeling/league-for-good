@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {
-	TableFooter as MuiTableFooter,
-	TableRowColumn,
-	TableRow
-} from '@material-ui/core/Table';
+import { TableFooter as MuiTableFooter } from '@material-ui/core/TableFooter';
+import TableCell from '@material-ui/core/TableCell';
+import TableRow from '@material-ui/core/TableRow';
+// import {
+// 	TableFooter as MuiTableFooter,
+// 	TableRowColumn,
+// 	TableRow
+// } from '@material-ui/core/Table';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeft from '@material-ui/icons/ChevronLeft';
 import ChevronRight from '@material-ui/icons/ChevronRight';
@@ -31,7 +34,8 @@ export default class TableFooter extends Component {
 		return (
 			<MuiTableFooter>
 				<TableRow>
-					<TableRowColumn style={{float: 'right'}}>
+					{/* <TableRowColumn style={{float: 'right'}}> */}
+					<TableCell style={{float: 'right'}}>
 						<IconButton
 							disabled={page === 0}
 							onClick={()=> onClick(-1)}
@@ -44,10 +48,13 @@ export default class TableFooter extends Component {
 							>
 							<ChevronRight/>
 						</IconButton>
-					</TableRowColumn>
-					<TableRowColumn style={footerTextStyle}>
+					</TableCell>
+					{/* </TableRowColumn> */}
+					{/* <TableRowColumn style={footerTextStyle}> */}
+					<TableCell style={footerTextStyle}>
 						{this.renderText()}
-					</TableRowColumn>
+					</TableCell>
+					{/* </TableRowColumn> */}
 				</TableRow>
 			</MuiTableFooter>
 		);

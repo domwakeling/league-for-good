@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ListItemLink from '../utils/ListItemLink.jsx';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+// import ListItemLink from '../utils/ListItemLink.jsx';
 import * as Links from '../routes';
 
 import Avatar from '@material-ui/core/Avatar';
@@ -13,17 +16,27 @@ const MenuLeagueItem = props => {
     const bgCol = cssMenu.avatar.backgroundColor;
 
     return (
-        <ListItemLink
-            icon={
+        <ListItem button={true} onClick={() => selectLeague(league)}>
+            <ListItemIcon>
                 <Avatar
                     src={SportsIcons[league.sportType]}
-                    style={ {backgroundColor: bgCol } }
+                    style={{ backgroundColor: bgCol }}
                 />
-            }
-            onClick={() => selectLeague(league)}
-            primary={league.name}
-            to={Links.TEAM_LIST}
-        />
+            </ListItemIcon>
+            <ListItemText primary={league.name} />
+        </ListItem>
+
+        // <ListItemLink
+        //     icon={
+        //         <Avatar
+        //             src={SportsIcons[league.sportType]}
+        //             style={ {backgroundColor: bgCol } }
+        //         />
+        //     }
+        //     onClick={() => selectLeague(league)}
+        //     primary={league.name}
+        //     to={Links.TEAM_LIST}
+        // />
     );
 };
 

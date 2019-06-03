@@ -10,7 +10,8 @@ import {
 	changeTheme
 } from '../../actions/index';
 import PropTypes from 'prop-types';
-
+import { withRouter } from 'react-router';
+import * as Links from '../routes';
 
 class NavBar extends Component {
 	constructor(props) {
@@ -24,6 +25,7 @@ class NavBar extends Component {
 
 	selectLeague = league => {
 		this.props.selectLeague(league._id);
+		this.props.history.push(Links.TEAM_LIST);
 	}
 
 	themeMenuToggle = () => {
@@ -54,6 +56,7 @@ class NavBar extends Component {
 
 NavBar.propTypes = {
 	changeTheme: PropTypes.func,
+	history: PropTypes.object,
 	leagues: PropTypes.arrayOf(PropTypes.object),
 	open: PropTypes.bool,
 	openModal: PropTypes.func,
@@ -82,5 +85,4 @@ function mapDispatchToProps(dispatch) {
 	}, dispatch);
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(NavBar);
-
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(NavBar));

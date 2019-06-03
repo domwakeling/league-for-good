@@ -20,9 +20,7 @@ class Dashboard extends Component {
 		const { league, history } = this.props;
 		const tabProps = { league, history, leagueId: league._id };
 
-
 		return (
-
 			<div>
 				{league.name &&
 				<div style={cssContent.header}>

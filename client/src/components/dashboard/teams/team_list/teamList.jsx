@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 
 import { cssContent, cssDashboard } from '../../../styles';
 import TableTemplate from '../../helper/tableTemplate/tableTemplate.jsx';
-import MenuItem from '@material-ui/core/MenuItem';
 // TODO: this used to be a DropDownMenu, check it still works
-import Popper from '@material-ui/core/Popper';
+import Menu from '@material-ui/core/Menu';
+import MenuItem from '@material-ui/core/MenuItem';
 
 import { configTeamForTable } from './teamData';
 
@@ -17,12 +17,13 @@ class TeamTable extends Component {
 		super(props);
 
 		this.state = {
-			filterValue: 'all'
+			filterValue: 'all',
+			anchorEl: null
 		};
 	}
 
 	handleChange = (e, i, filterValue) => {
-		this.setState({ filterValue });
+		this.setState({ filterValue, anchorEl: e.currentTarget });
 	}
 
     // Filter the team list array with params in state
@@ -49,15 +50,16 @@ class TeamTable extends Component {
 
 		return (
 			<div style={cssContent.body}>
-				<Popper
+				<Menu
 					onChange={this.handleChange}
+					open={false}
 					style={cssDashboard.table.teams.dropdown}
 					value={this.state.filterValue}
 					>
-					<MenuItem primaryText='All Teams' value='all' />
-					<MenuItem primaryText='Active Teams' value='active' />
-					<MenuItem primaryText='Archived Teams' value='archived' />
-				</Popper>
+					<MenuItem value='all'>All Teams</MenuItem>
+					<MenuItem value='active'>Active Teams</MenuItem>
+					<MenuItem value='archived'>Archived Teams</MenuItem>
+				</Menu>
 				<TableTemplate
 					headers={this.props.headers}
 					rows={this.filterTeams()}

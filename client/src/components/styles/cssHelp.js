@@ -6,7 +6,7 @@ const theme = themes.getCurrentThemeProps();
 // is rendered inside cssContent
 export const cssHelp = {
 	container: {
-		backgroundColor: theme.alternateTextColor,
+		backgroundColor: theme.primary.light,
 		padding: '40px',
 		textAlign: 'left'
 	},
@@ -27,8 +27,8 @@ export const cssHelp = {
 		padding: '20px',
 		margin: '0px auto',
 		marginBottom: '40px',
-		color: theme.alternateTextColor,
-		backgroundColor: theme.accent3Color,
+		color: theme.text.secondary,
+		backgroundColor: theme.primary.main,
 		border: '2px dotted ' + theme.borderColor
 	},
 	li: {

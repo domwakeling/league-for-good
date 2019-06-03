@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Table } from '@material-ui/core/Table';
+import Table from '@material-ui/core/Table';
 
 import TableBody from './tableBody.jsx';
 import TableHeader from './tableHeader.jsx';
@@ -154,7 +154,7 @@ class TableTemplate extends Component {
 							{this.props.title}
 						</h1>
 				}
-				{
+				{/* {
 					this.props.subtitle &&
 						<p style={cssDashboard.title}>
 							<b>{this.props.subtitle}</b>
@@ -181,7 +181,7 @@ class TableTemplate extends Component {
 						rowsPerPage={this.state.rowsPerPage}
 						total={rows.length}
 					/>
-				</Table>
+				</Table> */}
 			</div>
 		);
 	}
