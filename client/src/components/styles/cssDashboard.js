@@ -15,7 +15,9 @@ export const cssDashboard = {
 	// tabs are used to display sections to the user
 	tabs: {
 		inkBar: {
-			zIndex: 999
+			zIndex: 999,
+			backgroundColor: theme.primary.main,
+			color: theme.primary.contrastText
 		},
 		tab: {
 			height: '48px'
@@ -25,22 +27,31 @@ export const cssDashboard = {
 		textAlign: 'center',
 		margin: '0px 0px 0px 20px',
 		padding: '0px',
-		color: theme.textColor
+		color: theme.text.primary
 	},
 	// top section of the dashboard
 	toolbar: {
 		title: {
-			color: theme.alternateTextColor,
+			color: theme.primary.contrastText,
+			backgroundColor: theme.primary.dark,
 			letterSpacing: 1.5,
 			fontWeight: 'bolder',
 			fontSize: '2em'
 		},
 		subtitle: {
-			color: theme.accent3Color,
-			marginLeft: '10px'
+			color: theme.secondary.dark,
+			fontWeight: '400',
+			fontSize: '0.5em',
+			marginLeft: '3px',
+			paddingTop: '0.6em',
+			letterSpacing: 0
 		},
 		separator: {
-			backgroundColor: theme.accent3Color
+			backgroundColor: theme.secondary.dark,
+			width: '2px',
+			height: '0.6em',
+			marginLeft: '20px',
+			marginTop: '0.2em'
 		}
 	},
 	warning: {
@@ -89,7 +100,7 @@ export const cssDashboard = {
 		sortArrowInactiveColor: theme.borderColor,
 		// for icons rendered inside the table
 		iconHover: {
-			backgroundColor: theme.accent3Color,
+			backgroundColor: theme.secondary.light,
 			borderRadius: '25px'
 		},
 		// columns uses defaultCol for all the columns in the table and

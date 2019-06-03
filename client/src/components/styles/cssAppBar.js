@@ -13,12 +13,15 @@ export const cssAppBar = {
 	text: {
 		// color: theme.alternateTextColor,
 		color: theme.text.secondary,
-		letterSpacing: 2,
-		flexGrow: 1
+		letterSpacing: 1,
+		flexGrow: 1,
+		fontWeight: 400,
+		fontSize: '20px'
 	},
 	iconStyle: {
 		// color: theme.alternateTextColor
-		color: theme.text.secondary
+		// color: theme.text.secondary
+		color: theme.primary.contrastText
 	},
 	themeMenuItem: {
 		display: 'inline-block',

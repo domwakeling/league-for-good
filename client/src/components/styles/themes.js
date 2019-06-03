@@ -25,7 +25,8 @@ const themeValues = {
 		primary: {
 			main: '#8BC34A',
 			dark: '#689F38',
-			light: '#DCEDC8'
+			light: '#DCEDC8',
+			contrastText: 'white'
 			// pickerHeaderColor: '#8BC34A',
 			// canvasColor: '#DCEDC8'
 		}
@@ -40,7 +41,8 @@ const themeValues = {
 		primary: {
 			main: '#009688',
 			dark: '#00796B',
-			light: '#B2DFDB'
+			light: '#B2DFDB',
+			contrastText: 'white'
 			// pickerHeaderColor: '#009688',
 			// canvasColor: '#B2DFDB'
 		}
@@ -55,7 +57,8 @@ const themeValues = {
 		primary: {
 			main: '#03A9F4',
 			dark: '#0288D1',
-			light: '#B3E5FC'
+			light: '#B3E5FC',
+			contrastText: 'white'
 			// pickerHeaderColor: '#03A9F4',
 			// canvasColor: '#B3E5FC'
 		}

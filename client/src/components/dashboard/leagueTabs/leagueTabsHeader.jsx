@@ -1,27 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Toolbar from '@material-ui/core/Toolbar';
-// import {
-// 	Toolbar,
-// 	ToolbarGroup,
-// 	ToolbarSeparator,
-// 	ToolbarTitle
-// } from '@material-ui/core/Toolbar';
 import { cssDashboard } from '../../styles';
 
 
 const Header = ({league}) => (
-	<Toolbar>
-		{/* <ToolbarGroup>
-			<ToolbarTitle
-				style={cssDashboard.toolbar.title}
-				text={league.name}
-			/>
-			<ToolbarSeparator style={cssDashboard.toolbar.separator} /> */}
+	<Toolbar style={cssDashboard.toolbar.title}>
+			<p>{league.name}</p>
+			<span style={cssDashboard.toolbar.separator} />
 			<em style={cssDashboard.toolbar.subtitle}>
 				{`${league.sportType} League`}
 			</em>
-		{/* </ToolbarGroup> */}
 	</Toolbar>
 );
 

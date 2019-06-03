@@ -18,7 +18,7 @@ import LogOutIcon from '@material-ui/icons/ExitToApp';
 import ListItemLink from '../utils/ListItemLink.jsx';
 import MenuLeagueItem from './MenuLeagueItem.jsx';
 
-import { cssMenu } from '../styles';
+import { cssMenu as css} from '../styles';
 
 const Menu = (props) => {
 	const { open, leagues, selectLeague, openModal } = props;
@@ -38,8 +38,8 @@ const Menu = (props) => {
 	}, []);
 
 	return (
-		<Drawer open={open} variant='persistent' width={'15%'}>
-			<List style={cssMenu.drawer.list}>
+		<Drawer open={open} style={css.drawer} variant='persistent' width={'15%'}>
+			<List style={css.drawer.list}>
 				{activeLeagues.length > 0 ? (
 					<div>
 						{activeLeagues.map((league, i) => (
@@ -58,10 +58,10 @@ const Menu = (props) => {
 						<ListItem
 							button={true}
 							onClick={handleClick}
-							style={cssMenu.archive}
+							style={css.archive}
 							>
 							<ListItemIcon>
-								<ArchiveIcon style={cssMenu.icons} />
+								<ArchiveIcon style={css.icons} />
 							</ListItemIcon>
 							<ListItemText primary='Archive' />
 							{openArchive ? <ExpandLess /> : <ExpandMore />}
@@ -82,18 +82,18 @@ const Menu = (props) => {
 					</div>) : <noscript />
 				}
 				<ListItemLink
-					icon={<AddCircle style={cssMenu.icons} />}
+					icon={<AddCircle style={css.icons} />}
 					primary='Create League'
 					to='/create'
 				/>
 				<ListItemLink
-					icon={<Help style={cssMenu.icons} />}
+					icon={<Help style={css.icons} />}
 					primary='Help'
 					to='/help'
 				/>
 				<ListItem button={true} onClick={() => openModal('logout')}>
 					<ListItemIcon>
-						<LogOutIcon style={cssMenu.icons} />
+						<LogOutIcon style={css.icons} />
 					</ListItemIcon>
 					<ListItemText primary='Log out' />
 				</ListItem>

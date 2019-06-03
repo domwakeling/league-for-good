@@ -38,7 +38,7 @@ const Bar = props => {
 					>
 					<MenuIcon style={css.iconStyle}/>
 				</IconButton>
-				<h3 style={css.text}>League For Good</h3>
+				<p style={css.text}>League For Good</p>
 				<ThemeMenu {...iconProps} style={css.iconStyle}/>
 			</Toolbar>
 		</AppBar>
