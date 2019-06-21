@@ -38,24 +38,18 @@ const LeagueTabs = ({history, leagueId}) => {
 				value={value}
 				>
 				{
-					tabs.map(tab => (
+					tabs.map((tab, idx) => (
 						<Tab
-							// key={i}
+							key={idx}
 							label={tab.name}
-							// onActive={()=> history.push(tab.links[0].url)}
 							style={cssDashboard.tabs.tab}
-							>
-							{/* {generateLinks(tab.links, leagueId)}
-							{routes[tab.name]} */}
-						</Tab>
+						/>
 						)
 					)
 				}
 			</Tabs>
-			{value === 0 && <TeamRoutes />}
-			{/* {value === 1 && <PlayerRoutes />}
-			{value === 2 && <SeasonRoutes />}
-			{value === 3 && <SettingsRoutes />} */}
+			{generateLinks(tabs[value].links, leagueId)}
+			{routes[tabs[value].name]}
 		</div>
 	);
 };
