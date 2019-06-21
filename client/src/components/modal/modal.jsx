@@ -12,6 +12,7 @@ import modalMapping from './modalMappings.jsx';
 import * as submitActions from '../../actions/index';
 
 import { cssModal } from '../styles';
+import { DialogActions } from '@material-ui/core';
 
 class Modal extends Component {
 
@@ -44,37 +45,64 @@ class Modal extends Component {
 
 		const handleSubmit = this.getAction().handleSubmit;
 
-		const actions = [
-			<Button
-				backgroundColor={cssModal.raisedButton.backgroundColor}
-				label={actionLabel || 'Submit'}
-				labelStyle={cssModal.raisedButton.label}
-				onClick={() => handleSubmit(data)}
-				style={cssModal.raisedButton.style}
-			/>,
-			<Button
-				backgroundColor={cssModal.raisedButton.backgroundColor}
-				label='Cancel'
-				labelStyle={cssModal.raisedButton.label}
-				onClick={this.handleClose}
-				style={cssModal.raisedButton.style}
-			/>
-		];
+		// const actions = [
+		// 	<Button
+		// 		backgroundColor={cssModal.raisedButton.backgroundColor}
+		// 		// label={actionLabel || 'Submit'}
+		// 		labelStyle={cssModal.raisedButton.label}
+		// 		onClick={() => handleSubmit(data)}
+		// 		style={cssModal.raisedButton.style}
+		// 		>
+		// 		{actionLabel || 'Submit'}
+		// 	</Button>,
+		// 	<Button
+		// 		backgroundColor={cssModal.raisedButton.backgroundColor}
+		// 		// label='Cancel'
+		// 		labelStyle={cssModal.raisedButton.label}
+		// 		onClick={this.handleClose}
+		// 		style={cssModal.raisedButton.style}
+		// 		>
+		// 		Cancel
+		// 	</Button>
+		// ];
 
 		return (
 			<div>
 				<Dialog
-					actions={actions}
-					bodyStyle={cssModal.dialogBody}
-					contentStyle={cssModal.dialogContent}
-					modal={false}
-					onRequestClose={this.handleClose}
+					// actions={actions}
+					// bodyStyle={cssModal.dialogBody}
+					// contentStyle={cssModal.dialogContent}
+					// modal={false}
+					// onRequestClose={this.handleClose}
+					onClose={this.handleClose}
 					open={open}
 					// title={title}
 					// titleStyle={cssModal.title}
 					>
 					<DialogTitle style={cssModal.title}>{title}</DialogTitle>
 					{Children ? <Children {...data} /> : null}
+					<DialogActions>
+						<Button
+							// backgroundColor={cssModal.raisedButton.backgroundColor}
+							// label={actionLabel || 'Submit'}
+							// labelStyle={cssModal.raisedButton.label}
+							color='primary'
+							onClick={() => handleSubmit(data)}
+							style={cssModal.raisedButton.style}
+							>
+							{actionLabel || 'Submit'}
+						</Button>
+						<Button
+							// backgroundColor={cssModal.raisedButton.backgroundColor}
+							// label='Cancel'
+							// labelStyle={cssModal.raisedButton.label}
+							color='primary'
+							onClick={this.handleClose}
+							style={cssModal.raisedButton.style}
+							>
+							Cancel
+						</Button>
+					</DialogActions>
 				</Dialog>
 			</div>
 		);
