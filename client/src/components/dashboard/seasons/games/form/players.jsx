@@ -4,7 +4,7 @@ import { Field } from 'redux-form';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListSubheader from '@material-ui/core/ListSubheader';
-import { Checkbox } from '../../../../redux_form_mui/replacement';
+import { Checkbox } from '../../../../utils/redux_form_mui/replacement';
 
 const PlayerList = ({ teamName, players }) => (
 	<List subheader={teamName}>

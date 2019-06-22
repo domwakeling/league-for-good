@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
-import DialogContent from '@material-ui/core/DialogContent'
+import DialogContent from '@material-ui/core/DialogContent';
 import Button from '@material-ui/core/Button';
 
 import { submit } from 'redux-form';

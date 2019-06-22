@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import MenuItem from '@material-ui/core/MenuItem';
 import { Field } from 'redux-form';
 import { cssDashboard } from '../../../../styles';
-import { Select } from '../../../../redux_form_mui/replacement';
+import { Select } from '../../../../utils/redux_form_mui/replacement';
 
 const renderTeams = teams =>
 	teams.map(team => (

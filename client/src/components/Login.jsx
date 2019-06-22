@@ -2,7 +2,7 @@ import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import Button from '@material-ui/core/Button';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar'
+import Toolbar from '@material-ui/core/Toolbar';
 import { cssAppBar, cssLogin, cssModal } from './styles';
 import { DialogTitle, DialogContent, DialogActions } from '@material-ui/core';
 
