@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogContent from '@material-ui/core/DialogContent'
 import Button from '@material-ui/core/Button';
 
 import { submit } from 'redux-form';
@@ -40,52 +41,25 @@ class Modal extends Component {
 	render() {
 
 		const { view, open, data } = this.props;
-
 		const { title, Children, actionLabel } = modalMapping[view];
-
 		const handleSubmit = this.getAction().handleSubmit;
-
-		// const actions = [
-		// 	<Button
-		// 		backgroundColor={cssModal.raisedButton.backgroundColor}
-		// 		// label={actionLabel || 'Submit'}
-		// 		labelStyle={cssModal.raisedButton.label}
-		// 		onClick={() => handleSubmit(data)}
-		// 		style={cssModal.raisedButton.style}
-		// 		>
-		// 		{actionLabel || 'Submit'}
-		// 	</Button>,
-		// 	<Button
-		// 		backgroundColor={cssModal.raisedButton.backgroundColor}
-		// 		// label='Cancel'
-		// 		labelStyle={cssModal.raisedButton.label}
-		// 		onClick={this.handleClose}
-		// 		style={cssModal.raisedButton.style}
-		// 		>
-		// 		Cancel
-		// 	</Button>
-		// ];
 
 		return (
 			<div>
 				<Dialog
-					// actions={actions}
-					// bodyStyle={cssModal.dialogBody}
-					// contentStyle={cssModal.dialogContent}
-					// modal={false}
-					// onRequestClose={this.handleClose}
 					onClose={this.handleClose}
 					open={open}
-					// title={title}
-					// titleStyle={cssModal.title}
 					>
 					<DialogTitle style={cssModal.title}>{title}</DialogTitle>
-					{Children ? <Children {...data} /> : null}
+					{
+						Children ? (
+							<DialogContent>
+								<Children {...data} />
+							</DialogContent>
+						) : null
+					}
 					<DialogActions>
 						<Button
-							// backgroundColor={cssModal.raisedButton.backgroundColor}
-							// label={actionLabel || 'Submit'}
-							// labelStyle={cssModal.raisedButton.label}
 							color='primary'
 							onClick={() => handleSubmit(data)}
 							style={cssModal.raisedButton.style}
@@ -93,9 +67,6 @@ class Modal extends Component {
 							{actionLabel || 'Submit'}
 						</Button>
 						<Button
-							// backgroundColor={cssModal.raisedButton.backgroundColor}
-							// label='Cancel'
-							// labelStyle={cssModal.raisedButton.label}
 							color='primary'
 							onClick={this.handleClose}
 							style={cssModal.raisedButton.style}
