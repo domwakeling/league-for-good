@@ -1,14 +1,21 @@
 import React from 'react';
 import Dialog from '@material-ui/core/Dialog';
 import Button from '@material-ui/core/Button';
-import { cssLogin } from './styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar'
+import { cssAppBar, cssLogin, cssModal } from './styles';
 import { DialogTitle, DialogContent, DialogActions } from '@material-ui/core';
 
 const LoginModal = () => {
 	return (
 		<div>
+			<AppBar style={cssAppBar.main}>
+				<Toolbar>
+					<p style={cssAppBar.text}>League For Good</p>
+				</Toolbar>
+			</AppBar>
 			<Dialog open={true}>
-				<DialogTitle>
+				<DialogTitle style={cssModal.title}>
 					Log in with your Google+ account
 				</DialogTitle>
 				<DialogContent>
