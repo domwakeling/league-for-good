@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import IconButton from '@material-ui/core/IconButton';
+import Tooltip from '@material-ui/core/Tooltip';
 import { cssContent } from '../../../styles';
 import { Link, withRouter } from 'react-router-dom';
 
@@ -17,19 +18,22 @@ const LinkTemplate = props => {
 
 	return (
 		<Link to={{ pathname: url, state: {leagueId} }}>
-			<IconButton
-				hoveredStyle={iconButton.hoveredStyle}
-				iconStyle={ linkIsActive ?
-					iconButton.iconStyleActive :
-					iconButton.iconStyle
-				}
-				style={iconButton.style}
-				tooltip={description}
-				tooltipPosition='bottom-right'
-				touch={true}
-				>
-				{icon}
-			</IconButton>
+			<Tooltip placement='bottom-start' title={description}>
+				<IconButton
+					// hoveredStyle={iconButton.hoveredStyle}
+					// iconStyle={ linkIsActive ?
+					// 	iconButton.iconStyleActive :
+					// 	iconButton.iconStyle
+					// }
+					color={linkIsActive ? 'primary' : 'secondary'}
+					style={iconButton.style}
+					// tooltip={description}
+					// tooltipPosition='bottom-right'
+					// touch={true}
+					>
+					{icon}
+				</IconButton>
+			</Tooltip>
 		</Link>
 	);
 };

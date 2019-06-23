@@ -3,57 +3,45 @@ import PropTypes from 'prop-types';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-// import {
-// 	TableHeader as MuiTableHeader,
-// 	TableHeaderColumn,
-// 	TableRow
-// } from '@material-ui/core/Table';
-
-// TODO: look at rebuilding ColumnHeaderChild 
-// import ColumnHeaderChild from './columnHeaderChild.jsx';
+import TableSortLabel from '@material-ui/core/TableSortLabel';
 import { cssDashboard } from '../../../styles';
 
 // Header row for the table containing column names
 export default class TableHeader extends Component {
-	// static muiName = 'TableHeader';
-
 
 	renderColumns = () => {
 		const { onSort, sortColumnIndex, sortDirection } = this.props;
 		return this.props.headers.map(function(header, i) {
 			return (
-				// <TableHeaderColumn
 				<TableCell
 					colSpan={header.colSpan || 1}
 					key={i}
 					style={cssDashboard.table.colHeaderStyle}
 					>
-						{header.label}
-					{/* <ColumnHeaderChild
-						colIndex={i}
-						label={header.label}
-						onClick={onSort}
-						sortable={header.sortable}
-						sortColumnIndex={sortColumnIndex}
-						sortDirection={sortDirection}
-					/> */}
-				{/* </TableHeaderColumn> */}
+						{
+							header.sortable ? (
+								<TableSortLabel
+									active={i === sortColumnIndex}
+									direction={sortDirection}
+									hideSortIcon={!header.sortable}
+									onClick={(e) => {onSort(e, i);}}
+									>
+									{header.label}
+								</TableSortLabel>
+							) : (
+								header.label
+							)
+						}
 				</TableCell>
 			);
 		});
 	}
 	render() {
 		return (
-			// <MuiTableHeader
-			<TableHead
-				adjustForCheckbox={false}
-				displaySelectAll={false}
-				selectable={false}
-				>
+			<TableHead>
 				<TableRow>
 					{ this.renderColumns()}
 				</TableRow>
-			{/* </MuiTableHeader> */}
 			</TableHead>
 		);
 	}

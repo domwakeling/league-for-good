@@ -32,7 +32,7 @@ const ModalLink = props => {
 
 	return (
 		<IconButton
-			hoveredStyle={cssDashboard.table.iconHover}
+			// hoveredStyle={cssDashboard.table.iconHover}
 			onClick={()=> openModal(modalView, modalData)}
 			>
 			<IconSVG/>

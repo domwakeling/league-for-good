@@ -33,6 +33,7 @@ const LeagueTabs = ({history, leagueId}) => {
 	return (
 		<div>
 			<Tabs
+				centered={true}
 				onChange={handleChange}
 				style={cssDashboard.tabs.inkBar}
 				value={value}

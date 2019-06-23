@@ -33,7 +33,7 @@ const SeasonLink = props => {
 	}
 	return (
 		<IconButton
-			hoveredStyle={cssDashboard.table.iconHover}
+			// hoveredStyle={cssDashboard.table.iconHover}
 			onClick={() => handleClick(props, url)}
 			>
 			<ListIcon />

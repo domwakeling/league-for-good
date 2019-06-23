@@ -1,3 +1,4 @@
+// TODO: pretty sure this isn't releveant any more
 import React from 'react';
 import PropTypes from 'prop-types';
 import ArrowUp from '@material-ui/icons/ArrowDropUp';

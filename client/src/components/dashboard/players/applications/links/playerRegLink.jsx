@@ -21,7 +21,9 @@ const PlayerLink = props => {
 
 	return (
 		<Link to={playerUrl}>
-			<IconButton hoveredStyle={cssDashboard.table.iconHover}>
+			<IconButton
+				// hoveredStyle={cssDashboard.table.iconHover}
+				>
 				<ProfileIcon />
 			</IconButton>
 		</Link>

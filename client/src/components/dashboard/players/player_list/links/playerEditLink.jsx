@@ -15,7 +15,9 @@ const PlayerEditLink = ({ player }) => {
 
 	return (
 			<Link to={{ state, pathname }}>
-				<IconButton hoveredStyle={cssDashboard.table.iconHover}>
+				<IconButton
+					// hoveredStyle={cssDashboard.table.iconHover}
+					>
 					<EditIcon/>
 				</IconButton>
 			</Link>

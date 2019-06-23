@@ -1,52 +1,39 @@
+// TODO: remove 'selectable' below
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { TableBody as MuiTableBody } from '@material-ui/core/TableBody';
+import TableBody from '@material-ui/core/TableBody';
 import TableRow from '@material-ui/core/TableRow';
 import TableCell from '@material-ui/core/TableCell';
-// import {
-// 	TableBody as MuiTableBody,
-// 	TableRow,
-// 	TableRowColumn
-// } from '@material-ui/core/Table';
 
+export default class CustomTableBody extends Component {
 
-export default class TableBody extends Component {
-	static muiName = 'TableBody';
-
-	renderBody = rows =>
-		rows.map((row, i) =>
-			(<TableRow
-				key={i}
-				selectable={false}
-				>
+	renderBody = rows => rows.map((row, i) => (
+		<TableRow
+			key={i}
+			// selectable={false}
+			>
 			{
-				row.map(({colSpan, value}, i) =>
-					// (<TableRowColumn
-					(<TableCell
+				row.map(({colSpan, value}, i) => (
+					<TableCell
 						colSpan={colSpan}
 						key={i}
 						>
 						{ i === 0 ? <b>{value}</b> : <span>{value}</span> }
-					</TableCell>)
-					// </TableRowColumn>)
-				)
+					</TableCell>
+				))
 			}
 		</TableRow>)
 	)
 
-
 	render() {
 		return (
-			<MuiTableBody
-				displayRowCheckbox={false}
-				preScanRows={false}
-				>
+			<TableBody>
 				{this.renderBody(this.props.rows)}
-			</MuiTableBody>
+			</TableBody>
 		);
 	}
 }
 
-TableBody.propTypes = {
+CustomTableBody.propTypes = {
 	rows: PropTypes.arrayOf(PropTypes.arrayOf(PropTypes.object))
 };

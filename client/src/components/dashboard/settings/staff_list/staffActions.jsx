@@ -37,7 +37,7 @@ class Icon extends Component {
 
 		return (
 			<IconButton
-				hoveredStyle={cssDashboard.table.iconHover}
+				// hoveredStyle={cssDashboard.table.iconHover}
 				onClick={()=> this.openModal({ email, leagueId, role }, action) }
 				>
 				{action === 'edit' ?

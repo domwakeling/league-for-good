@@ -16,7 +16,7 @@ const RosterLink = team => {
 	return (
 		<Link to={{ pathname: url, state }}>
 			<IconButton
-				hoveredStyle={cssDashboard.table.iconHover}
+				// hoveredStyle={cssDashboard.table.iconHover}
 				>
 				<ListIcon />
 			</IconButton>

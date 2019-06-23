@@ -19,7 +19,9 @@ const PlayerLink = props => {
 	return (
 		<div onClick={() => fetchPlayer(player)}>
 			<Link to={playerUrl}>
-				<IconButton hoveredStyle={cssDashboard.table.iconHover}>
+				<IconButton
+					// hoveredStyle={cssDashboard.table.iconHover}
+					>
 					<ListIcon />
 				</IconButton>
 			</Link>

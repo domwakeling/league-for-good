@@ -50,7 +50,8 @@ class TeamTable extends Component {
 
 		return (
 			<div style={cssContent.body}>
-				<Menu
+				{/* TODO: reinstate this menu */}
+				{/* <Menu
 					onChange={this.handleChange}
 					open={false}
 					style={cssDashboard.table.teams.dropdown}
@@ -59,7 +60,7 @@ class TeamTable extends Component {
 					<MenuItem value='all'>All Teams</MenuItem>
 					<MenuItem value='active'>Active Teams</MenuItem>
 					<MenuItem value='archived'>Archived Teams</MenuItem>
-				</Menu>
+				</Menu> */}
 				<TableTemplate
 					headers={this.props.headers}
 					rows={this.filterTeams()}

@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Table from '@material-ui/core/Table';
 
-import TableBody from './tableBody.jsx';
+import CustomTableBody from './tableBody.jsx';
 import TableHeader from './tableHeader.jsx';
-import TableFooter from './tableFooter.jsx';
 import SearchTable from './tableSearchInput.jsx';
 import { cssDashboard } from '../../../styles';
 import sortRows from './utils/sorting';
+import TablePagination from '@material-ui/core/TablePagination';
 
 // A table template to easily render a table in the management panel
 // Also allows the styling of each column to be specified or uses a default
@@ -50,8 +50,8 @@ class TableTemplate extends Component {
 		this.state = {
 			page: 0,
 			rows: Array.from(this.props.rows),
-			rowsPerPage: 20,
-			sortDirection: 'none',
+			rowsPerPage: 10,
+			sortDirection: 'asc',
 			searchableColumnIndex: searchableColumnIndex,
 			searchableColumnLabel: searchableColumnLabel,
 			sortColumnIndex: null,
@@ -61,9 +61,9 @@ class TableTemplate extends Component {
 	}
 
 	sortMap = {
-		none: 'asc',
+		// none: 'asc',
 		asc: 'desc',
-		desc: 'none'
+		desc: 'asc'
 	}
 	// Change state of teams based on panel rendered
 	componentWillReceiveProps(nextProps) {
@@ -81,7 +81,7 @@ class TableTemplate extends Component {
 			this.setState({
 				page: 0,
 				rows: Array.from(nextProps.rows),
-				sortDirection: 'none',
+				sortDirection: 'asc',
 				searchableColumnIndex: searchableColumnIndex,
 				searchableColumnLabel: searchableColumnLabel,
 				sortColumnIndex: null
@@ -120,7 +120,7 @@ class TableTemplate extends Component {
 	}
 	// Sort when clicked
 	// @colProp: which column to sort by
-	onSort(colIndex) {
+	onSort(e, colIndex) {
 		let sortedRows;
 		let { sortDirection, sortColumnIndex } = this.state;
 		const [...initialRows] = this.props.rows;
@@ -144,8 +144,19 @@ class TableTemplate extends Component {
 		});
 	}
 
+	handleChangePage(event, newPage) {
+		this.setState({page: newPage});
+	}
+
+	handleChangeRowsPerPage(event) {
+		this.setState({rowsPerPage: event.target.value});
+	}
+
 	render() {
-		const { rows } = this.state;
+		const { page, rows, rowsPerPage } = this.state;
+		const handleChangePage = this.handleChangePage.bind(this);
+		const handleChangeRowsPerPage = this.handleChangeRowsPerPage.bind(this);
+		console.log(rows[0]);
 		return (
 			<div>
 				{
@@ -154,7 +165,7 @@ class TableTemplate extends Component {
 							{this.props.title}
 						</h1>
 				}
-				{/* {
+				{
 					this.props.subtitle &&
 						<p style={cssDashboard.title}>
 							<b>{this.props.subtitle}</b>
@@ -174,14 +185,23 @@ class TableTemplate extends Component {
 						sortColumnIndex={this.state.sortColumnIndex}
 						sortDirection={this.state.sortDirection}
 					/>
-					<TableBody rows={this.paginate(rows)}/>
-					<TableFooter
-						onClick={this.onPaginate}
-						page={this.state.page}
-						rowsPerPage={this.state.rowsPerPage}
-						total={rows.length}
-					/>
-				</Table> */}
+					<CustomTableBody rows={this.paginate(rows)}/>
+				</Table>
+				<TablePagination
+					backIconButtonProps={{
+						'aria-label': 'Previous Page'
+					}}
+					component='div'
+					count={rows.length}
+					nextIconButtonProps={{
+						'aria-label': 'Next Page'
+					}}
+					onChangePage={handleChangePage}
+					onChangeRowsPerPage={handleChangeRowsPerPage}
+					page={page}
+					rowsPerPage={rowsPerPage}
+					rowsPerPageOptions={[5, 10, 20]}
+				/>
 			</div>
 		);
 	}
